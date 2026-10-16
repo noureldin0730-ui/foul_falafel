@@ -30,7 +30,7 @@ class ArabiaGame extends FlameGame {
   Future<void> _buildWorld() async {
     try {
       final bgImage = await Flame.images.load(
-        'assets/images/arabia/street_bg.png',
+        'images/arabia/street_bg.png',
       );
       add(SpriteComponent(
         sprite: Sprite(bgImage),
