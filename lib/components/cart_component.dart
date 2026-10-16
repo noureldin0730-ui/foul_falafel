@@ -18,7 +18,7 @@ class CartComponent extends PositionComponent {
 
   @override
   Future<void> onLoad() async {
-    final image = await Flame.images.load('assets/images/arabia/cart.png');
+    final image = await Flame.images.load('images/arabia/cart.png');
     _sprite = Sprite(image);
   }
 
