@@ -38,16 +38,18 @@ class CustomerComponent extends PositionComponent with TapCallbacks {
 
   @override
   Future<void> onLoad() async {
+    // صورة الزبون — path نسبي
     final image = await Flame.images.load(
-      'assets/images/arabia/customer_$variant.png',
+      'images/arabia/customer_$variant.png',
     );
     _sprite = Sprite(image);
 
     order = OrderData.random();
 
+    // صورة الأكل — path نسبي
     try {
       final foodImg = await Flame.images.load(
-        'assets/images/arabia/${order.imageName}',
+        'images/arabia/${order.imageName}',
       );
       _foodSprite = Sprite(foodImg);
     } catch (e) {
